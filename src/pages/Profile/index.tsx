@@ -150,11 +150,8 @@ const Profile: React.FC = () => {
           uri: response.uri,
         });
 
-        console.log(data);
-
         api.patch('/users/avatar', data).then(apiResponse => {
-          // console.log(apiResponse);
-          // updateUser(apiResponse.data);
+          updateUser(apiResponse.data);
         });
       },
     );
